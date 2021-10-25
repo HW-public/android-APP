@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myappmovies">
+
+    <uses-permission android:name="android.permission.INTERNET"/><!--添加联网权限-->
+
+    <application
+        android:hardwareAccelerated ="true"
+        android:usesCleartextTraffic="true"
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher02"
+        android:label="@string/name"
+        android:roundIcon="@mipmap/ic_launcher02"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyAppMovies">
+        <activity
+            android:name=".StartAnimation"
+            android:exported="true"
+            android:hardwareAccelerated="true"><!--启动硬件加速-->
+            <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity01"
+            android:windowSoftInputMode="adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:exported="true"><!--是否可以被其他组件调用-->
+        </activity>
+        <activity android:name=".Activity_1" />
+        <activity android:name=".Activity_2" />
+        <activity android:name=".Activity_3" />
+        <activity android:name=".Activity_4" />
+    </application>
+
+</manifest>
